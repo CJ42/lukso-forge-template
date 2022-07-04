@@ -3,9 +3,9 @@
 
 
 
-# forge-lsp-smart-contracts
+# Lukso - Forge Template
 
-Forge/Foundry project to get started with contracts from [`@lukso/lsp-smart-contracts`](https://github.com/lukso-network/lsp-smart-contracts)
+Forge/Foundry project template to get started developing contracts from [`@lukso/lsp-smart-contracts`](https://github.com/lukso-network/lsp-smart-contracts)
 
 ## Getting Started
 
