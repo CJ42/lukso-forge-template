@@ -9,7 +9,7 @@ Install foundry. You can find the installation instructions here: https://book.g
 Then clone the repository.
 
 ```bash
-git clone <repo-url-foundry-lsp-template>
+git clone https://github.com/CJ42/forge-lsp-smart-contracts.git
 npm i
 ```
 
