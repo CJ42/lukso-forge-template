@@ -1,4 +1,5 @@
-![foundry-lukso-logo](https://user-images.githubusercontent.com/31145285/177119238-9e41c5e4-ead7-471d-b8dd-c8f9168d04fc.jpg)
+![logo-foundry-lukso](https://user-images.githubusercontent.com/31145285/177119624-d787f69d-fcaf-4b75-9a84-5a7967ca0b87.png)
+
 
 
 
