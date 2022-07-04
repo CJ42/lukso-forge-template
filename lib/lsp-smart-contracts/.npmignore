@@ -1,0 +1,10 @@
+
+.idea
+.vscode
+
+contracts/
+
+migrations
+test
+.gitmodules
+.gitignore
