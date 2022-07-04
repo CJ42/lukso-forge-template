@@ -3,7 +3,7 @@
 
 
 
-# Lukso - Forge Template
+# LUKSO - Forge Template
 
 Forge/Foundry project template to get started developing contracts from [`@lukso/lsp-smart-contracts`](https://github.com/lukso-network/lsp-smart-contracts)
 
