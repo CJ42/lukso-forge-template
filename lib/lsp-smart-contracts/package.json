@@ -1,0 +1,98 @@
+{
+  "name": "@lukso/lsp-smart-contracts",
+  "version": "0.6.1",
+  "description": "The reference implementation for universal profiles smart contracts",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "contracts/**/*.sol",
+    "!contracts/Helpers/**/*.sol",
+    "artifacts/**/*.json",
+    "constants.js",
+    "README.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "hardhat compile; NODE_NO_WARNINGS=1 jest",
+    "test:parallel": "run-p test:up test:lsp1 test:lsp4 test:lsp6 test:lsp7 test:lsp8 test:lsp9 test:factory",
+    "test:helpers": "NODE_NO_WARNINGS=1 jest tests/Helpers/*.test.ts",
+    "test:up": "NODE_NO_WARNINGS=1 jest UniversalProfile",
+    "test:lsp1": "NODE_NO_WARNINGS=1 jest LSP1",
+    "test:lsp2": "NODE_NO_WARNINGS=1 jest LSP2",
+    "test:lsp4": "NODE_NO_WARNINGS=1 jest LSP4",
+    "test:lsp6": "NODE_NO_WARNINGS=1 jest LSP6",
+    "test:lsp7": "NODE_NO_WARNINGS=1 jest LSP7",
+    "test:lsp8": "NODE_NO_WARNINGS=1 jest LSP8",
+    "test:lsp9": "NODE_NO_WARNINGS=1 jest LSP9",
+    "test:universalfactory": "NODE_NO_WARNINGS=1 jest UniversalFactory",
+    "build": "hardhat compile",
+    "package": "hardhat prepare-package",
+    "release": "run-s clean build package && standard-version",
+    "clean": "rm -rf build && rm -rf types",
+    "generate-types": "run-p generate-types:*",
+    "generate-types:web3": "typechain --target=web3-v1 'build/contracts/*.json'",
+    "generate-types:ethers": "typechain --target=ethers-v5 'build/contracts/*.json'",
+    "remixd": "remixd -s . --remix-ide",
+    "linter": "solhint 'contracts/**/*.sol'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukso-network/lsp-smart-contracts.git"
+  },
+  "keywords": [
+    "LSP",
+    "smart contracts",
+    "solidity",
+    "universalprofiles",
+    "lukso",
+    "ethereum"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lukso-network/lsp-smart-contracts/issues"
+  },
+  "homepage": "https://github.com/lukso-network/lsp-smart-contracts#readme",
+  "dependencies": {
+    "@erc725/smart-contracts": "^3.1.1",
+    "@openzeppelin/contracts": "^4.6.0",
+    "solidity-bytes-utils": "0.8.0"
+  },
+  "devDependencies": {
+    "@erc725/erc725.js": "0.8.0",
+    "@ethereum-waffle/jest": "^3.3.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0-rc.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@primitivefi/hardhat-dodoc": "^0.1.1",
+    "@remix-project/remixd": "^0.5.1",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@typechain/web3-v1": "^3.1.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.4",
+    "esbuild": "^0.12.24",
+    "esbuild-jest": "^0.5.0",
+    "eth-create2-calculator": "^1.1.5",
+    "ethers": "5.4.6",
+    "hardhat": "^2.6.2",
+    "hardhat-contract-sizer": "^2.4.0",
+    "hardhat-deploy": "^0.9.4",
+    "hardhat-deploy-ethers": "^0.3.0-beta.11",
+    "hardhat-packager": "^1.1.0",
+    "jest": "^27.1.0",
+    "keccak256": "1.0.3",
+    "merkletreejs": "0.2.24",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.6",
+    "standard-version": "^9.3.1",
+    "ts-node": "^10.2.0",
+    "typechain": "^5.1.2",
+    "typescript": "^4.3.5",
+    "web3": "^1.5.2"
+  }
+}
